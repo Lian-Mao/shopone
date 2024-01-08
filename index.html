@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <title>Shopone</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="header-container container">
+                <div class="header-contact">
+                    <span>(+65) 9876-4372</span>
+
+                    <span>Our location</span>
+                </div>
+                <p class="header-alert-news">
+                    Super Sale - save with dicounts!
+                </p>
+                <a href="login.html" class="header-top-action">
+                    Log in/ Sign up
+                </a>
+            </div>
+        </div>
+        <nav class="nav container">
+            <a href="index.html" class="nav-logo"></a>
+            <img src="./logo.jpg" alt="" class="nav-logo-img" />
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Shop</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Account</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Compare</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Login</a>
+                    </li>
+                </ul>
+                <div class="header__search">
+                    <input type="text" class="form__input" placeholder="Search here" />
+                    <button class="search__btn">
+                        <img src="./search-alt-2-regular-24.png" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="header__user-actions">
+                <a href="wishlist.html" class="header__action-btn">
+                    <a href="wishlist.html" class="header__action-btn">
+                        <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAtpJREFUSEu1V8lh4zAMHFSyciUrVRK7EtuVxFuJnEqsThAChEjwsrKP6OVQIK7BDBSCPASA9Vf5dM6PTQkETu7UfuDHgvm3I/c+x9KmuWEH+bxNqFtl39F/tKDTwNxdSSI9ZcXarjLOBNDWYNJUhgnANoTP9XeU2wzCBxgzoM7k2QjYGLio8zgfMxgfAMR+MnDl3QbQBeBoV2XiKi7iX8Nft1FGdi7vJaHzu5kMAW5M+AcuuxUDly29hoObtjSePwB8mfO/ubJmuB5M+ALTHwLPHJOazEqSvPsEqZplubCawRO+pRmbyWx2p2J3J+C5M9J8CkSfGSY65bbHmpJLAr844iRYnnrUdvafNmiCt3uKTkjVUogOnPp0w7hfkpcva++NgPtBYCcUY0YQcA3BbjZ0JxC2HcU9sLRmtcCLtm4kO83UeXFohCj6hdpcAvYyM0WrzwALJvKcEl16bRwLW5WSGk6Bli+rWGB5xCTyVLuKaQFYhqZx5HW4mg/z3WQl/F6tvQsD6rfmsWA8BckSOtn4/7i8PPdu4xCwhmCzcTPFqwObcGiwxL2+brf96Mik4as1PgBODOgp18tJpGGSKeeEpY1TzpVI6WpHIp/CY0fdNvFM/HirCv5mf2dfaZIt0QVMT79g2oojha5BZUSD9+WQprH/xVAIyAywqZ9SqBgor24d4dHogncVnB55XRp3PdfjptolV/wuQdtLdhTKZZczVRJYGpwA0Wd5YuXuslO3NEjmbgkr1QWt1a0znNW6cpXr5RZzpUuulICFCc/ud5wjXTe0Exb5WbadcAErPeSdcHR1ExvFp1HOFtHjmqNFB3P9CuljeqA7bh93gGuV40rgs61Ol7Aa2iB1Inaq7wnIuPVF5TQ53Y5B/YQXDGs/rt8HHuPk295SZt8CxUIvOxEDH+DxxkZWXlrs7X8MI/iG39UH3X7b0qbHw+E9wvRX3v9ouI6ROLao8fwGsfoqMwI0azkAAAAASUVORK5CYII=" />
+                        <span class="count"> 2</span>
+
+
+                    </a>
+
+                    <a href="wishlist.html" class="header__action-btn">
+                        <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAqBJREFUSEudlztyFDEQhj+RQxFwADskIyPDaw5gX4FN4Apku5BwBAqSXa7gA+AJISMhxXsAMg4gpjU9o9boMWOryuVdPfrx9/+3tI7icIDXFf1sp8qH7jUr5h48QixZQOmE3RM/O4zjhZQKy9ZQRMjmUUermnEzDGtvIeManK4MxRr0axCkZ8sJpFDverj2wzFZ8FP91mQf3TV3XwJd8GC27fqJ1HGhXBrXrKQ1Z9m82P8wpBbHBrjQrxsHG2XsETiN2x6gKrErfzJixpVqiuPbQcluC16cZyWoEmfqAqFkYkccS/DnUwJZq4gTd8CZ1kQinaGsPLDzZTh8wNW7o8NvbVuajgZCRfO7/sBeJyTS01AZr/8WOtqwLIFLAjKm+s5rPE9J4LlND6XOag0kJu52fTJ7zTLpGUsNZAZ3nVqVleG844TX+prYJ44UDhuJBUa2RwqIwHzQyknJgowiSZeM4e56VouR8linr3NwJyv+Aeo2TyTqNzHW7MJshB4Mb3u4j5OTMedmzxkWxelBgxM9f7tH9l0m1wlsY6WB2kiyo4NEi0Z+hXjaZJyjUErIwi3QRU0vuwuXgqno9Ll+NAYs5BJN10lmGGtY0Dn85ditrKOqjgvRnIE7gNeGv4bOrgNflKG9FrWlmnde5j04G2+aRSGqhE6jalZl3MjnLfAU+Az8m1XvBXAF/AJu5pElDF8DmDHwCXiv36Xmr002z4A/4B7rRXKN56Zsf+mVmTeW73qZi2/hzCMT1AWOTt5LestJu/1Yq0dS44zz86J4BOYvOv0VeDeTyg9wL8FLCV4J5K0GVRRCgznPgSfAz8oeeT79Bv622JfdkTXNjR0qPhaqIOY/f3LkksfeGnmM9WvsXUdXk3HhQK3Drwgx2VIw/R9zZuojCxATPAAAAABJRU5ErkJggg==" />
+                        <span class="count"> 2</span>
+
+                    </a>
+            </div>
+
+        </nav>
+    </header>
+    <main class="main">
+
+        <section class="home section--lg">
+            <div class="home__container container grid">
+                <div class="home__content">
+                    <span class="home__subtitle">The all time sale</span>
+                    <h1 class="home__title">Widest range of items <span>All year round!</span></h1>
+                    <p class="home__description">Save more with special discounts and flash deals up to 60% off! </p>
+                    <a href="#" class="btn">Shop now</a>
+                </div>
+                <img src="https://hips.hearstapps.com/ell.h-cdn.co/assets/16/04/980x490/landscape-1453910197-elle-handbags-index.jpg?resize=1200:*"
+                    alt="" class="home__img" />
+            </div>
+        </section>
+        <section class="categories container section">
+            <h3 class="section__title">
+                <span>Most</span> Popular
+            </h3>
+            <div class="categories__container swiper">
+                <div id="cat_container" class="swiper-wrapper">
+                </div>
+
+                <div class="swiper-button-next" style="color: orange;">
+
+                </div>
+                <div class="swiper-button-prev" style="color: orange;">
+
+                </div>
+
+            </div>
+        </section>
+        <section class="products section container">
+            <div class="tab__btns">
+                <span class="tab__btn active-tab" data-target="#featured">
+                    Featured
+                </span>
+                <span class="tab__btn" data-target="#popular">
+                    Popular
+                </span>
+                <span class="tab__btn" data-target="#new-added">
+                    New
+                </span>
+            </div>
+            <div class="tab__items">
+                <div class="tab__item active-tab" content id="featured">
+                    <div id="featuredItems" class="products__container grid">
+
+                    </div>
+                </div>
+                <div class="tab__item" content id="popular">
+                    <div id="popularItems" class="products__container grid">
+                    </div>
+                </div>
+                <div class="tab__item" content id="new-added">
+                    <div id="newItems" class="products__container grid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="deals section">
+            <div class="deals__container container grid">
+               
+            </div>
+        </section>
+
+        <section class="new__arrivals container section">
+            <h3 class="section__title">
+                <span>New</span> Arrivals
+            </h3>
+            <div class="categories__container swiper">
+                <div id="newArrivals" class="swiper-wrapper">
+
+
+                </div>
+                <div class="swiper-button-next" style="color: orange;">
+
+                </div>
+                <div class="swiper-button-prev" style="color: orange;">
+
+                </div>
+            </div>
+        </section>
+
+        <section class="showcase section">
+            <div class="showcase__container container grid">
+
+                <div id="Hot" class="showcase__wrapper">
+                </div>
+
+                <div id="special" class="showcase__wrapper">
+
+                </div>
+
+                <div id="top" class="showcase__wrapper">
+
+                </div>
+
+                <div id="trending" class="showcase__wrapper">
+
+
+                </div>
+            </div>
+
+
+        </section>
+        <section class="newsletter section home__newsletter">
+            <div class="newsletter__container container grid">
+                <h3 class="newsletter__title flex">
+                    <img src="envelope-regular-84.png" alt="" class="newsletter__icon"/>
+                    Sign up to our newsletter
+                </h3>
+                <p class="newsletter__description">... and receive up to 50% in savings!</p>
+                <form action="" class="newsletter__form">
+                    <input type="text" placeholder="Enter email" class="newsletter__input"/>
+                    <button type="submit" class="newsletter__btn">Subscribe</button>
+                </form>
+            </div>
+
+        </section>
+
+       <footer class="footer container">
+        <div class="footer__container grid">
+            <div class="footer__content">
+                <a href="index.html" class="footer__logo">
+                    <img src="logo.jpg" alt="" class="footer__logo-img">
+                </a>
+                <h4 class="footer__subtitle">Contact</h4>
+                <p class="footer__description">
+                    <span>Address:</span> 1234 Test road street 69 12345
+                </p>
+
+                <p class="footer__description">
+                    <span>Phone:</span> +65 123456789
+                </p>
+
+                <p class="footer__description">
+                    <span>Hours:</span> 10:00-18:00, Mon-Fri
+                </p>
+                <div class="footer__social">
+                    <h4 class="footer__subtitle">Follow at</h4>
+                    <div class="footer__social-links flex">
+                        <a href="">
+                            <img src="https://duet-cdn.vox-cdn.com/thumbor/0x0:1600x1600/828x552/filters:focal(800x800:801x801):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/24805464/F1x5VdQX0AA9Sgt.jpeg" alt="" class="footer__social-icon">
+                        </a>
+
+                        <a href="">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" alt="" class="footer__social-icon">
+                        </a>
+
+                        <a href="">
+                            <img src="https://logowik.com/content/uploads/images/tiktok-black-icon5820.jpg" alt="" class="footer__social-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Address</h3>
+                <ul class="footer__links">
+                    <li><a href="" class="footer__link">About us</a></li>
+                    <li><a href="" class="footer__link">Delivery information</a></li>
+                    <li><a href="" class="footer__link">Privacy policy</a></li>
+                    <li><a href="" class="footer__link">T & Cs</a></li>
+                    <li><a href="" class="footer__link">Contact</a></li>
+                    <li><a href="" class="footer__link">Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">My Account</h3>
+                <ul class="footer__links">
+                    <li><a href="" class="footer__link">Sign in</a></li>
+                    <li><a href="" class="footer__link">View Cart</a></li>
+                    <li><a href="" class="footer__link">My wishlist</a></li>
+                    <li><a href="" class="footer__link">Track order</a></li>
+                    <li><a href="" class="footer__link">Help</a></li>
+                    <li><a href="" class="footer__link">Order</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Secured Payments</h3>
+                <img src="https://t4.ftcdn.net/jpg/04/73/84/61/360_F_473846184_0k637f6855ZJqaulKqAmgJTEVGVibR1P.jpg" alt="" class="payment__img">
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="copyright">&copy; 2023 shopone. All rights reserved</p>
+            <span class="designer">Designed by John Doe</span>
+        </div>
+       </footer>
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js" type="module"></script>
+
+
+</html>
